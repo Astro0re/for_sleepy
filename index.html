@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damola's Page</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="icons8-heart-48.png">
+</head>
+
+<body class="bg-yellow-700 text-gray-50 flex flex-col min-h-screen align-items-center">
+    <main>
+
+    <header class="flex flex-row justify-center gap-1 items-center p-4 ">
+        <div>            
+        <h1 class="text-center text-5xl font-bold m-10">For Sleepy</h1>
+        </div>
+        <div>
+            <img src="Screenshot_20250926_104716_WhatsApp(1).jpg" alt="babe_1" class="h-24 w-24 folat-left rounded-full border-4 border-yellow-900">
+        </div>
+    </header>
+
+    <section>
+        <nav class="bg-yellow-600 m-1 p-0.5 rounded-lg">
+            <ul class="flex justify-center space-x-4 mb-6 gap-1 p-2 text-lg font-semibold">
+                <a href="" class="hover:text-blue-500"><li>Her</li></a>
+                <a href="" class="hover:text-blue-500"><li>Our Sounds</li></a>
+                <a href="" class="hover:text-blue-500"><li>Memories</li></a>
+                <a href="" class="hover:text-blue-500"><li>Plans</li></a>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="intro" class="text-center p-2 text-center">
+        <p class="text-2xl text-center">Hey Damola</p>
+        <p>I know you still have me on a time out, and for good reason..</p>
+        <p>But I can't stand you being mad at me..</p>
+        <p>I just still have to ask?</p>
+    </section>
+
+    <section class="p-2 text-center" id ="questionSection">
+        <p class="text-2xl text-center p-3" >Will you forgive me?</p>
+        <button id="revealButton" class="bg-yellow-800 text-gray-50 px-3 py-2 rounded-lg text-2xl hover:bg-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+           Yes
+        </button>
+        <button id="NoWayBro" class="bg-yellow-800 text-gray-50 px-3 py-2 rounded-lg text-2xl hover:bg-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+           No
+        </button>
+    </section> 
+
+        <section class="p-2" id="apology" hidden="true">
+            <p class="text-1xl mb-4">I just wanted to say sorry again for being a bad boyfriend. I know I haven't been the best, and I want you to know that I'm committed to making things right.</p>
+            <p class="text-1xl mb-4"> </p>
+            <p class="text-1xl mb-4">You mean the world to me, and I hate the thought of hurting you. Please forgive me for my mistakes. I'm ready to listen, learn, and grow so that I can be the partner you deserve.</p>
+            <p class="text-1xl mb-4">Thank you for your patience and understanding. I love you more than words can express, and I'm determined to show you that every day.</p>
+            <p class="text-1xl">With all my love,<br>Soji</p>
+            <button id="return" class="mt-4 bg-yellow-800 text-gray-50 px-3 py-2 rounded-lg text-2xl hover:bg-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+               Close</button>   
+        </section>
+
+    </main>
+
+    <footer class="mt-auto text-center p-4 bg-yellow-800 p-5">
+        <p>&copy; 2025 A very sorry boyfriend. All rights reserved.</p>
+    </footer>
+
+</body>
+
+<script>
+    document.getElementById('NoWayBro').addEventListener('click', function() {
+        alert("Error, Option does not exist 🙃.");
+    });
+    document.getElementById('revealButton').addEventListener('click', function() {
+        document.getElementById('apology').hidden = false
+        document.getElementById('intro').hidden = true
+        document.getElementById('questionSection').hidden = true;
+    });
+   
+    document.getElementById('return').addEventListener('click', function() {
+        document.getElementById('apology').hidden = true
+        document.getElementById('questionSection').hidden = false;
+        document.getElementById('intro').hidden = false
+    });
+</script>
+
+</html>
